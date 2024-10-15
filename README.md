@@ -1,4 +1,5 @@
 # Para comenzar debes de realizar la clonación del repositorio https://github.com/tu-usuario/ejercicio-git-libro mediante la siguiente secuencia de comandos:
+<div aling="justify"> 
 
 ```code
 bae2@jpexposito-VirtualBox:~$ git clone https://github.com/Brayan-PD/ejercicio-git-libro
@@ -164,3 +165,95 @@ bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$   git branch biblio
   bibliografia        502bef9 Añadido el índice .
 * main                502bef9 [adelante 5] Añadido el índice .
 ```
+## Ejercicio 6
+### Crear el fichero capitulos/capitulo4.txt y añadir el texto siguiente:
+```code
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ touch capitulo4.txt
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ ls
+capitulo1.txt  capitulo2.txt  capitulo3.txt  capitulo4.txt  indice.txt
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ nano capitulo4.txt 
+  "En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto."
+  
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git log --graph --all --oneline
+* 7bfa7ac (HEAD -> bibliografia) se añade el capitulo4
+* 0334bc0 (origin/main, origin/HEAD, main) Se hacen los ejecicios hasta el 4
+* 502bef9 Añadido el índice .
+* bbcd5a6 Se crea el indice.
+* 15f63b9 Añadido capítulo 3.
+* efe4404 Añadido capítulo 2
+* 791e2e0 Añadido capítulo 1
+* 8a4d0b6 Initial commit
+```
+## Ejercicio 7
+### Cambiar a la rama bibliografía.Crear el fichero bibliografia.txt y añadir la siguiente referencia:
+
+```code
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ touch bibligrafia.txt
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ nano bibligrafia.txt 
+Chacon, S. and Straub, B. Pro Git. Apress.
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git add .
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git commit -m "Añadida primera referencia bibliográfica."
+[bibliografia ce9f16c] Añadida primera referencia bibliográfica.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 "cap\303\255tulos/bibligrafia.txt"
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git log --graph --all --oneline
+* ce9f16c (HEAD -> bibliografia) Añadida primera referencia bibliográfica.
+* 7bfa7ac se añade el capitulo4
+* 0334bc0 (origin/main, origin/HEAD, main) Se hacen los ejecicios hasta el 4
+* 502bef9 Añadido el índice .
+* bbcd5a6 Se crea el indice.
+* 15f63b9 Añadido capítulo 3.
+* efe4404 Añadido capítulo 2
+* 791e2e0 Añadido capítulo 1
+* 8a4d0b6 Initial commit
+```
+## Ejercicio 8
+### Fusionar la rama bibliografía con la rama main.
+### Mostrar la historia del repositorio incluyendo todas las ramas.
+### Eliminar la rama bibliografía.
+### Mostrar de nuevo la historia del repositorio incluyendo todas las ramas.
+
+```code
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git branch 
+  bibliografia
+* main
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git merge bibliografia 
+Actualizando 0334bc0..ce9f16c
+Fast-forward
+ "cap\303\255tulos/bibligrafia.txt" | 1 +
+ "cap\303\255tulos/capitulo4.txt"   | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 "cap\303\255tulos/bibligrafia.txt"
+ create mode 100644 "cap\303\255tulos/capitulo4.txt"
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$  git log --graph --all --oneline
+* ce9f16c (HEAD -> main, bibliografia) Añadida primera referencia bibliográfica.
+* 7bfa7ac se añade el capitulo4
+* 0334bc0 (origin/main, origin/HEAD) Se hacen los ejecicios hasta el 4
+* 502bef9 Añadido el índice .
+* bbcd5a6 Se crea el indice.
+* 15f63b9 Añadido capítulo 3.
+* efe4404 Añadido capítulo 2
+* 791e2e0 Añadido capítulo 1
+* 8a4d0b6 Initial commit
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git branch -d bibliografia
+Eliminada la rama bibliografia (era ce9f16c).
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git log --graph --all --oneline
+* ce9f16c (HEAD -> main) Añadida primera referencia bibliográfica.
+* 7bfa7ac se añade el capitulo4
+* 0334bc0 (origin/main, origin/HEAD) Se hacen los ejecicios hasta el 4
+* 502bef9 Añadido el índice .
+* bbcd5a6 Se crea el indice.
+* 15f63b9 Añadido capítulo 3.
+* efe4404 Añadido capítulo 2
+* 791e2e0 Añadido capítulo 1
+* 8a4d0b6 Initial commit
+```
+# Ejercicio 9
+### Crear la rama bibliografía.
+### Cambiar a la rama bibliografía.
+### Cambiar el fichero bibliografia.txt para que contenga las siguientes referencias:
+
+```code
+
+```
+</div>
