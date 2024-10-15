@@ -254,6 +254,73 @@ bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git log --graph --all --onelin
 ### Cambiar el fichero bibliografia.txt para que contenga las siguientes referencias:
 
 ```code
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git branch bibliografia
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git checkout bibliografia
+M       README.md
+Cambiado a rama 'bibliografia'
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ cd capítulos/
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ touch bibligrafia.txt
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ nano bibligrafia.txt 
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git commit -a -m "Añadida nueva referencia bibliográfica."
+[bibliografia 41b20a2] Añadida nueva referencia bibliográfica.
+ 2 files changed, 96 insertions(+), 2 deletions(-)
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git checkout main
+Cambiado a rama 'main'
+Tu rama está adelantada a 'origin/main' por 2 commits.
+  (usa "git push" para publicar tus commits locales)
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ nano bibligrafia.txt 
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$  git commit -a -m "Añadida nueva referencia bibliográfica."
+[main 320e7e3] Añadida nueva referencia bibliográfica.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$  git merge bibliografia
+Auto-fusionando capítulos/bibligrafia.txt
+CONFLICTO (contenido): Conflicto de fusión en capítulos/bibligrafia.txt
+Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git branch
+  bibliografia
+* main
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git merge bibliografia 
+error: No es posible hacer merge porque tienes archivos sin fusionar.
+ayuda: Corrígelos en el árbol de trabajo y entonces usa 'git add/rm <archivo>',
+ayuda: como sea apropiado, para marcar la resolución y realizar un commit.
+fatal: Saliendo porque existe un conflicto sin resolver.
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git add .
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git merge bibliografia 
+fatal: No has concluido la fusión (existe MERGE_HEAD).
+Por favor, realiza un commit con los cambios antes de fusionar.
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git commit -m "Se añden referencias"
+[main 983ae81] Se añden referencias
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git merge bibliografia 
+Ya está actualizado.
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git nano bibliografia
+git: 'nano' no es un comando de git. Mira 'git --help'.
 
+Los comandos más similares son
+        annotate
+        daemon
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ nano bibliografia
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ git commit -a -m "Solucionado conflicto bibliografía."
+En la rama main
+Tu rama está adelantada a 'origin/main' por 5 commits.
+  (usa "git push" para publicar tus commits locales)
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+        bibliografia
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$  git log --graph --all --oneline
+*   983ae81 (HEAD -> main) Se añden referencias
+|\  
+| * 41b20a2 (bibliografia) Añadida nueva referencia bibliográfica.
+* | 320e7e3 Añadida nueva referencia bibliográfica.
+|/  
+* ce9f16c Añadida primera referencia bibliográfica.
+* 7bfa7ac se añade el capitulo4
+* 0334bc0 (origin/main, origin/HEAD) Se hacen los ejecicios hasta el 4
+* 502bef9 Añadido el índice .
+* bbcd5a6 Se crea el indice.
+* 15f63b9 Añadido capítulo 3.
+* efe4404 Añadido capítulo 2
 ```
 </div>
