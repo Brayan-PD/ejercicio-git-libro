@@ -340,4 +340,18 @@ To https://github.com/Brayan-PD/ejercicio-git-libro
  bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git tag
 1.0.0
 ```
+## Ejercicio 2: Revertir un commit
+```code
+
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ cd capítulos/
+
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ nano capitulo1.txt 
+
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$ cd ..
+
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git commit -a -m "Agregada una línea en capítulo 1"
+[main d113591] Agregada una línea en capítulo 1
+ 2 files changed, 18 insertions(+)
+ 
+```
 </div>
