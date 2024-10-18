@@ -323,4 +323,21 @@ bae2@jpexposito-VirtualBox:~/ejercicio-git-libro/capítulos$  git log --graph --
 * 15f63b9 Añadido capítulo 3.
 * efe4404 Añadido capítulo 2
 ```
+---
+# Trabajando con tags, merge entre ramas y reset.
+### Ejercicio 1: Etiquetar una versión
+```code
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git tag -a 1.0.0 -m "Etiqueta nueva"
+
+bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git push origin --tags
+Enumerando objetos: 1, listo.
+Contando objetos: 100% (1/1), listo.
+Escribiendo objetos: 100% (1/1), 167 bytes | 167.00 KiB/s, listo.
+Total 1 (delta 0), reusados 0 (delta 0), pack-reusados 0
+To https://github.com/Brayan-PD/ejercicio-git-libro
+ * [new tag]         1.0.0 -> 1.0.0
+ 
+ bae2@jpexposito-VirtualBox:~/ejercicio-git-libro$ git tag
+1.0.0
+```
 </div>
